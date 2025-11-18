@@ -10,8 +10,8 @@ import StoreKit
 
 struct SettingsView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var privacy: String = "Privacy Policy"
-    @State private var terms: String = "Terms of Service"
+    @State private var privacy: String = "https://www.termsfeed.com/live/a29473e7-5888-4d80-b146-c50d645962c1"
+    @State private var terms: String = "https://www.termsfeed.com/live/6a541b0a-a566-41ef-901c-59666e13e97f"
     var body: some View {
         ZStack{
             Image(.mainBack)
