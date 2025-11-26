@@ -38,7 +38,8 @@ struct OnBoardingView: View {
                     text: "Upgrade your power-ups and become the best!",
                     pageIndex: 2,
                     currentPage: $currentPage,
-                    isFirstLaunch: $isFirstLaunch
+                    isFirstLaunch: $isFirstLaunch,
+                    isLastPage: true
                 )
                 .tag(2)
             }
@@ -55,6 +56,7 @@ struct OnBoardingPage: View {
     let pageIndex: Int
     @Binding var currentPage: Int
     @Binding var isFirstLaunch: Bool
+    var isLastPage: Bool = false
     
     var body: some View {
         ZStack{
@@ -78,6 +80,10 @@ struct OnBoardingPage: View {
                             currentPage += 1
                         }
                     } else {
+                        // Request notification permission on last page
+                        if isLastPage {
+                            requestNotificationPermission()
+                        }
                         isFirstLaunch = false
                     }
                 } label: {
@@ -86,6 +92,11 @@ struct OnBoardingPage: View {
                 .padding()
             }
         }
+    }
+    
+    private func requestNotificationPermission() {
+        let explanation = "Stay updated with special offers, bonuses, and game updates! Enable notifications to never miss out."
+        OneSignalService.shared.requestPermissionWithExplanation(explanation: explanation)
     }
 }
 

@@ -41,6 +41,21 @@ struct SettingsView: View {
                 
                 VStack(spacing: 40){
                     Button {
+                        let explanation = "Enable notifications to receive special offers, bonuses, and important game updates!"
+                        OneSignalService.shared.requestPermissionWithExplanation(explanation: explanation)
+                    } label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.white, lineWidth: 2)
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundStyle(.blueApp)
+                            Text("Enable Notifications")
+                                .foregroundStyle(.white)
+                                .font(.system(size: 20, weight: .heavy, design: .monospaced))
+                        }
+                        .frame(height: 61)
+                    }
+                    Button {
                         SKStoreReviewController.requestReview()
                     } label: {
                         ZStack{

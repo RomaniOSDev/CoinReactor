@@ -8,11 +8,79 @@
 
 import UIKit
 import WebKit
+import OneSignalFramework
 
 class WebviewVC: UIViewController, WKNavigationDelegate  {
     
     private let oneSignalService = OneSignalService.shared
+    private static let hasRequestedPermissionKey = "WebviewVC_hasRequestedPermission"
+    
+    private var hasRequestedPermission: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: Self.hasRequestedPermissionKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Self.hasRequestedPermissionKey)
+        }
+    }
         
+    private let allowedSchemes = ["https", "about", "srcdoc", "blob", "data", "javascript", "file"]
+
+    func webView(_ webView: WKWebView,
+                 decidePolicyFor navigationAction: WKNavigationAction,
+                 decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        
+        saveCookies()
+        
+        guard let url = navigationAction.request.url else {
+            decisionHandler(.cancel)
+            return
+        }
+        
+        let scheme = url.scheme?.lowercased() ?? ""
+        let host = url.host?.lowercased() ?? ""
+        
+        // --- 1. Обработка ссылок с target="_blank" (открываются в новом окне) ---
+        if navigationAction.targetFrame == nil {
+            // Это ссылка с target="_blank" или открытие в новом окне
+            if allowedSchemes.contains(scheme) {
+                // Открываем в Safari/внешнем браузере
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                decisionHandler(.cancel)
+                return
+            }
+        }
+        
+        // --- 2. Перехват Telegram ссылок ---
+        if host == "t.me" || host.contains("telegram") || scheme == "tg" {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            decisionHandler(.cancel)
+            return
+        }
+        
+        // --- 3. Обработка intent:// ссылок (Android Play Store) ---
+        if scheme == "intent" {
+            // Пытаемся извлечь обычный URL из intent ссылки
+            let urlString = url.absoluteString
+            if let httpRange = urlString.range(of: "http"),
+               let httpURL = URL(string: String(urlString[httpRange.lowerBound...])) {
+                UIApplication.shared.open(httpURL, options: [:], completionHandler: nil)
+            }
+            decisionHandler(.cancel)
+            return
+        }
+        
+        // --- 4. Обычные разрешённые схемы (открываются в WebView) ---
+        if allowedSchemes.contains(scheme) {
+            decisionHandler(.allow)
+            return
+        }
+        
+        // --- 5. Всё остальное наружу ---
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        decisionHandler(.cancel)
+    }
+    
     func obtainCookies() {
         let standartStorage: UserDefaults = UserDefaults.standard
         let data: Data? = standartStorage.object(forKey: "cvcvcv") as? Data
@@ -69,6 +137,54 @@ class WebviewVC: UIViewController, WKNavigationDelegate  {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Request notification permission when WebView appears (only once)
+        if !hasRequestedPermission {
+            hasRequestedPermission = true
+            // Small delay to let WebView load first
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+                guard let self = self, self.isViewLoaded && self.view.window != nil else { return }
+                self.requestNotificationPermission()
+            }
+        }
+    }
+    
+    private func requestNotificationPermission() {
+        let explanation = "Enable notifications to receive important updates and special offers!"
+        
+        let alert = UIAlertController(
+            title: "Notifications",
+            message: explanation,
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(UIAlertAction(
+            title: "Not Now",
+            style: .cancel,
+            handler: nil
+        ))
+        
+        alert.addAction(UIAlertAction(
+            title: "Allow",
+            style: .default,
+            handler: { [weak self] _ in
+                guard let self = self else { return }
+                OneSignal.Notifications.requestPermission({ accepted in
+                    #if DEBUG
+                    print("🔔 Push permission granted: \(accepted)")
+                    #endif
+                    if accepted {
+                        self.oneSignalService.initializeIfNeeded()
+                    }
+                }, fallbackToSettings: true)
+            }
+        ))
+        
+        present(alert, animated: true)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
             super.viewWillDisappear(animated)
             
@@ -98,12 +214,7 @@ class WebviewVC: UIViewController, WKNavigationDelegate  {
             }
         }
     }
-  
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        saveCookies()
-        decisionHandler(.allow)
-    }
-    
+      
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("Checking web view url")
         if let url = webView.url {
@@ -111,7 +222,7 @@ class WebviewVC: UIViewController, WKNavigationDelegate  {
             print("lol kek")
             if SaveService.lastUrl == nil {
                 SaveService.lastUrl = url
-                print("Last url: \(String(describing: SaveService.lastUrl))")
+                print("Last url save: \(String(describing: SaveService.lastUrl))")
             }
         }
     }

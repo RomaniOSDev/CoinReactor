@@ -23,8 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppsFlyerLib.shared().disableAdvertisingIdentifier = true
         AppsFlyerLib.shared().start()
 
-        //OneSignal
-        OneSignalService.shared.requestPermissionAndInitialize()
+        // Initialize OneSignal without requesting permissions (for handling push clicks)
+        // Permissions will be requested later in onboarding/settings
+        OneSignalService.shared.initializeIfNeeded()
         
         return true
     }
