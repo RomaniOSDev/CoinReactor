@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		742712F82ED6F6420076A8B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 742712F72ED6F6420076A8B5 /* GoogleService-Info.plist */; };
+		742712FC2ED6F6690076A8B5 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 742712FB2ED6F6690076A8B5 /* AppsFlyerLib */; };
+		742712FF2ED6F6810076A8B5 /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 742712FE2ED6F6810076A8B5 /* OneSignalFramework */; };
+		742713022ED6F8880076A8B5 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 742713012ED6F8880076A8B5 /* FirebaseDatabase */; };
+		7427130A2ED6F8A60076A8B5 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742713072ED6F8A60076A8B5 /* LoaderViewController.swift */; };
+		7427130B2ED6F8A60076A8B5 /* CheckLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742713042ED6F8A60076A8B5 /* CheckLink.swift */; };
+		7427130C2ED6F8A60076A8B5 /* OneSignalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742713052ED6F8A60076A8B5 /* OneSignalService.swift */; };
+		7427130D2ED6F8A60076A8B5 /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742713032ED6F8A60076A8B5 /* FireBaseManager.swift */; };
+		7427130E2ED6F8A60076A8B5 /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742713062ED6F8A60076A8B5 /* InternetViewController.swift */; };
+		7427130F2ED6F8A60076A8B5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742713082ED6F8A60076A8B5 /* Extensions.swift */; };
 		74F8FEE12ECBABB8006B1100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74F8FED82ECBABB8006B1100 /* Assets.xcassets */; };
 		74F8FEE32ECBABB8006B1100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F8FEDB2ECBABB8006B1100 /* LaunchScreen.storyboard */; };
 		74F8FEE42ECBABB8006B1100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F8FEDD2ECBABB8006B1100 /* Main.storyboard */; };
@@ -33,6 +43,14 @@
 
 /* Begin PBXFileReference section */
 		5E9D532804B3D0732860C545 /* Pods-CoinReactor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinReactor.release.xcconfig"; path = "Target Support Files/Pods-CoinReactor/Pods-CoinReactor.release.xcconfig"; sourceTree = "<group>"; };
+		742712F72ED6F6420076A8B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		742712F92ED6F64D0076A8B5 /* CoinReactor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoinReactor.entitlements; sourceTree = "<group>"; };
+		742713032ED6F8A60076A8B5 /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
+		742713042ED6F8A60076A8B5 /* CheckLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLink.swift; sourceTree = "<group>"; };
+		742713052ED6F8A60076A8B5 /* OneSignalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignalService.swift; sourceTree = "<group>"; };
+		742713062ED6F8A60076A8B5 /* InternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetViewController.swift; sourceTree = "<group>"; };
+		742713072ED6F8A60076A8B5 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		742713082ED6F8A60076A8B5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		74F8FE322ECB084D006B1100 /* CoinReactor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinReactor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F8FEBF2ECBABB8006B1100 /* CoinsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsEnum.swift; sourceTree = "<group>"; };
 		74F8FEC12ECBABB8006B1100 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -66,6 +84,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742713022ED6F8880076A8B5 /* FirebaseDatabase in Frameworks */,
+				742712FF2ED6F6810076A8B5 /* OneSignalFramework in Frameworks */,
+				742712FC2ED6F6690076A8B5 /* AppsFlyerLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +99,19 @@
 				E8CBE341D6E155CA4588FF60 /* Pods_CoinReactor.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		742713092ED6F8A60076A8B5 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				742713032ED6F8A60076A8B5 /* FireBaseManager.swift */,
+				742713042ED6F8A60076A8B5 /* CheckLink.swift */,
+				742713052ED6F8A60076A8B5 /* OneSignalService.swift */,
+				742713062ED6F8A60076A8B5 /* InternetViewController.swift */,
+				742713072ED6F8A60076A8B5 /* LoaderViewController.swift */,
+				742713082ED6F8A60076A8B5 /* Extensions.swift */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		74F8FE292ECB084D006B1100 = {
@@ -171,6 +205,7 @@
 				74F8FED22ECBABB8006B1100 /* Settings */,
 				74F8FED42ECBABB8006B1100 /* Store */,
 				74F8FED52ECBABB8006B1100 /* ContentView.swift */,
+				742713092ED6F8A60076A8B5 /* LoadingView */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -178,6 +213,7 @@
 		74F8FEE02ECBABB8006B1100 /* CoinReactor */ = {
 			isa = PBXGroup;
 			children = (
+				742712F92ED6F64D0076A8B5 /* CoinReactor.entitlements */,
 				74F8FEC02ECBABB8006B1100 /* Enums */,
 				74F8FEC72ECBABB8006B1100 /* Helpers */,
 				74F8FED62ECBABB8006B1100 /* Screens */,
@@ -188,6 +224,7 @@
 				74F8FEDD2ECBABB8006B1100 /* Main.storyboard */,
 				74F8FEDE2ECBABB8006B1100 /* SceneDelegate.swift */,
 				74F8FEDF2ECBABB8006B1100 /* ViewController.swift */,
+				742712F72ED6F6420076A8B5 /* GoogleService-Info.plist */,
 			);
 			path = CoinReactor;
 			sourceTree = "<group>";
@@ -246,6 +283,11 @@
 				Base,
 			);
 			mainGroup = 74F8FE292ECB084D006B1100;
+			packageReferences = (
+				742712FA2ED6F6690076A8B5 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+				742712FD2ED6F6810076A8B5 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
+				742713002ED6F8880076A8B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 74F8FE332ECB084D006B1100 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74F8FEE12ECBABB8006B1100 /* Assets.xcassets in Resources */,
+				742712F82ED6F6420076A8B5 /* GoogleService-Info.plist in Resources */,
 				74F8FEE32ECBABB8006B1100 /* LaunchScreen.storyboard in Resources */,
 				74F8FEE42ECBABB8006B1100 /* Main.storyboard in Resources */,
 			);
@@ -311,6 +354,12 @@
 				74F8FEEF2ECBABB8006B1100 /* MinigameView.swift in Sources */,
 				74F8FEF02ECBABB8006B1100 /* MiniGameViewModel.swift in Sources */,
 				74F8FEF12ECBABB8006B1100 /* OnBoardingView.swift in Sources */,
+				7427130A2ED6F8A60076A8B5 /* LoaderViewController.swift in Sources */,
+				7427130B2ED6F8A60076A8B5 /* CheckLink.swift in Sources */,
+				7427130C2ED6F8A60076A8B5 /* OneSignalService.swift in Sources */,
+				7427130D2ED6F8A60076A8B5 /* FireBaseManager.swift in Sources */,
+				7427130E2ED6F8A60076A8B5 /* InternetViewController.swift in Sources */,
+				7427130F2ED6F8A60076A8B5 /* Extensions.swift in Sources */,
 				74F8FEF22ECBABB8006B1100 /* SettingsView.swift in Sources */,
 				74F8FEF32ECBABB8006B1100 /* StoreView.swift in Sources */,
 				74F8FEF42ECBABB8006B1100 /* ContentView.swift in Sources */,
@@ -348,6 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoinReactor/CoinReactor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -362,7 +412,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mar.c01nr34ct8r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -385,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoinReactor/CoinReactor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -399,7 +450,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mar.c01nr34ct8r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -557,6 +608,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		742712FA2ED6F6690076A8B5 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.17.7;
+			};
+		};
+		742712FD2ED6F6810076A8B5 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-iOS-SDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.15;
+			};
+		};
+		742713002ED6F8880076A8B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		742712FB2ED6F6690076A8B5 /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 742712FA2ED6F6690076A8B5 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+		742712FE2ED6F6810076A8B5 /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 742712FD2ED6F6810076A8B5 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalFramework;
+		};
+		742713012ED6F8880076A8B5 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 742713002ED6F8880076A8B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 74F8FE2A2ECB084D006B1100 /* Project object */;
 }
