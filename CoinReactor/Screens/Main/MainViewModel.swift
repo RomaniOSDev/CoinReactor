@@ -42,6 +42,10 @@ final class MainViewModel: ObservableObject {
     private let storage: UserDefaults
     private var autoTapCancellable: AnyCancellable?
     
+    // Statistics and Achievements integration
+    private let statisticsViewModel = StatisticsViewModel.shared
+    private let achievementsViewModel = AchievementsViewModel.shared
+    
     private enum StorageKeys {
         static let balance = "main.balance"
         static let ownedCoins = "main.ownedCoins"
@@ -100,12 +104,34 @@ final class MainViewModel: ObservableObject {
         let reward = manualTapReward()
         coinsBalance += reward
         persistBalance()
+        
+        // Update statistics
+        statisticsViewModel.addCoins(reward)
+        statisticsViewModel.addTap()
+        
+        // Update achievements
+        achievementsViewModel.updateFromStatistics(
+            totalCoins: statisticsViewModel.totalCoinsEarned,
+            totalTaps: statisticsViewModel.totalTaps,
+            playTime: statisticsViewModel.totalPlayTime
+        )
+        
         return reward
     }
     
     func addCoins(_ amount: Int) {
         coinsBalance += amount
         persistBalance()
+        
+        // Update statistics
+        statisticsViewModel.addCoins(amount)
+        
+        // Update achievements
+        achievementsViewModel.updateFromStatistics(
+            totalCoins: statisticsViewModel.totalCoinsEarned,
+            totalTaps: statisticsViewModel.totalTaps,
+            playTime: statisticsViewModel.totalPlayTime
+        )
     }
     
     func byCoin(coin: Coins) {
@@ -125,6 +151,9 @@ final class MainViewModel: ObservableObject {
         persistBalance()
         persistOwnedCoins()
         persistSelectedCoin()
+        
+        // Update achievements
+        achievementsViewModel.updateCollectorAchievement(ownedCoins: ownedCoins.count)
     }
     
     func getStatusByCoin(coin: Coins) -> Bool {
@@ -155,6 +184,14 @@ final class MainViewModel: ObservableObject {
         
         persistBalance()
         persistPowerUps()
+        
+        // Update achievements
+        let totalLevels = powerUpLevels.values.reduce(0, +)
+        achievementsViewModel.updateMaxUpgradeAchievement(totalLevels: totalLevels)
+        
+        if type == .speed {
+            achievementsViewModel.updateSpeedDemonAchievement(speedLevel: level(for: .speed))
+        }
         
         if type == .click || type == .speed {
             startAutoTapTimer()
@@ -201,6 +238,25 @@ final class MainViewModel: ObservableObject {
         guard amount > 0 else { return }
         coinsBalance += amount
         persistBalance()
+        
+        // Update statistics
+        statisticsViewModel.addCoins(amount)
+        
+        // Update achievements
+        achievementsViewModel.updateFromStatistics(
+            totalCoins: statisticsViewModel.totalCoinsEarned,
+            totalTaps: statisticsViewModel.totalTaps,
+            playTime: statisticsViewModel.totalPlayTime
+        )
+    }
+    
+    // Expose view models for views
+    func getStatisticsViewModel() -> StatisticsViewModel {
+        return statisticsViewModel
+    }
+    
+    func getAchievementsViewModel() -> AchievementsViewModel {
+        return achievementsViewModel
     }
     
     private func persistBalance() {

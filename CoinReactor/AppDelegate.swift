@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import AppsFlyerLib
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,17 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // AppsFlyer Init
-        AppsFlyerLib.shared().appsFlyerDevKey = "H6BZvpvLEyndgeSBs36Yu"
-        AppsFlyerLib.shared().appleAppID = "6755430181"
-        AppsFlyerLib.shared().delegate = self
-        AppsFlyerLib.shared().isDebug = false
-        AppsFlyerLib.shared().disableAdvertisingIdentifier = true
-        AppsFlyerLib.shared().start()
-
-        // Initialize OneSignal without requesting permissions (for handling push clicks)
-        // Permissions will be requested later in onboarding/settings
-        OneSignalService.shared.initializeIfNeeded()
         
         return true
     }

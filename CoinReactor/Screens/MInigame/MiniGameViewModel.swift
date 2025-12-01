@@ -197,6 +197,9 @@ final class MiniGameViewModel: ObservableObject {
         
         let level = currentLevel?.number ?? 1
         unlockNextLevel(level)
+        
+        // Update statistics
+        StatisticsViewModel.shared.updateBestMiniGameLevel(level)
     }
     
     private func loseGame() {

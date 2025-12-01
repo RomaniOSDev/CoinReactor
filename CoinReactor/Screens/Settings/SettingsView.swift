@@ -40,21 +40,51 @@ struct SettingsView: View {
                 Spacer()
                 
                 VStack(spacing: 40){
-                    Button {
-                        let explanation = "Enable notifications to receive special offers, bonuses, and important game updates!"
-                        OneSignalService.shared.requestPermissionWithExplanation(explanation: explanation)
+                    NavigationLink {
+                        StatisticsView()
                     } label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.white, lineWidth: 2)
                             RoundedRectangle(cornerRadius: 20)
                                 .foregroundStyle(.blueApp)
-                            Text("Enable Notifications")
+                            Text("Statistics")
                                 .foregroundStyle(.white)
                                 .font(.system(size: 20, weight: .heavy, design: .monospaced))
                         }
                         .frame(height: 61)
                     }
+                    
+                    NavigationLink {
+                        AchievementsView()
+                    } label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.white, lineWidth: 2)
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundStyle(.blueApp)
+                            Text("Achievements")
+                                .foregroundStyle(.white)
+                                .font(.system(size: 20, weight: .heavy, design: .monospaced))
+                        }
+                        .frame(height: 61)
+                    }
+                    
+                    NavigationLink {
+                        DailyRewardsView()
+                    } label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.white, lineWidth: 2)
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundStyle(.blueApp)
+                            Text("Daily Rewards")
+                                .foregroundStyle(.white)
+                                .font(.system(size: 20, weight: .heavy, design: .monospaced))
+                        }
+                        .frame(height: 61)
+                    }
+                    
                     Button {
                         SKStoreReviewController.requestReview()
                     } label: {

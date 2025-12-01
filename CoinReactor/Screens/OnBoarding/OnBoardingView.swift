@@ -96,7 +96,7 @@ struct OnBoardingPage: View {
     
     private func requestNotificationPermission() {
         let explanation = "Stay updated with special offers, bonuses, and game updates! Enable notifications to never miss out."
-        OneSignalService.shared.requestPermissionWithExplanation(explanation: explanation)
+       // OneSignalService.shared.requestPermissionWithExplanation(explanation: explanation)
     }
 }
 
