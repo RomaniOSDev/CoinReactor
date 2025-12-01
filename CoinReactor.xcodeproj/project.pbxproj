@@ -3,29 +3,78 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 60;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		740F2B5E2EDD9A3B00376232 /* CoinsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B312EDD9A3B00376232 /* CoinsEnum.swift */; };
+		740F2B5F2EDD9A3B00376232 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B332EDD9A3B00376232 /* CardView.swift */; };
+		740F2B602EDD9A3B00376232 /* CounCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B342EDD9A3B00376232 /* CounCoinsView.swift */; };
+		740F2B612EDD9A3B00376232 /* LevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B352EDD9A3B00376232 /* LevelCell.swift */; };
+		740F2B622EDD9A3B00376232 /* MainBlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B362EDD9A3B00376232 /* MainBlueButtonView.swift */; };
+		740F2B632EDD9A3B00376232 /* PowerUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B372EDD9A3B00376232 /* PowerUpCell.swift */; };
+		740F2B642EDD9A3B00376232 /* StoreCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B382EDD9A3B00376232 /* StoreCellView.swift */; };
+		740F2B652EDD9A3B00376232 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B3A2EDD9A3B00376232 /* AchievementsView.swift */; };
+		740F2B662EDD9A3B00376232 /* AchievementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B3B2EDD9A3B00376232 /* AchievementsViewModel.swift */; };
+		740F2B672EDD9A3B00376232 /* DailyRewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B3D2EDD9A3B00376232 /* DailyRewardsView.swift */; };
+		740F2B682EDD9A3B00376232 /* DailyRewardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B3E2EDD9A3B00376232 /* DailyRewardsViewModel.swift */; };
+		740F2B692EDD9A3B00376232 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B402EDD9A3B00376232 /* MainView.swift */; };
+		740F2B6A2EDD9A3B00376232 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B412EDD9A3B00376232 /* MainViewModel.swift */; };
+		740F2B6B2EDD9A3B00376232 /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B432EDD9A3B00376232 /* GameBoardView.swift */; };
+		740F2B6C2EDD9A3B00376232 /* MinigameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B442EDD9A3B00376232 /* MinigameView.swift */; };
+		740F2B6D2EDD9A3B00376232 /* MiniGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B452EDD9A3B00376232 /* MiniGameViewModel.swift */; };
+		740F2B6E2EDD9A3B00376232 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B472EDD9A3B00376232 /* OnBoardingView.swift */; };
+		740F2B6F2EDD9A3B00376232 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B492EDD9A3B00376232 /* SettingsView.swift */; };
+		740F2B702EDD9A3B00376232 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B4B2EDD9A3B00376232 /* StatisticsView.swift */; };
+		740F2B712EDD9A3B00376232 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B4C2EDD9A3B00376232 /* StatisticsViewModel.swift */; };
+		740F2B722EDD9A3B00376232 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B4E2EDD9A3B00376232 /* StoreView.swift */; };
+		740F2B732EDD9A3B00376232 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B502EDD9A3B00376232 /* ContentView.swift */; };
+		740F2B742EDD9A3B00376232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B522EDD9A3B00376232 /* AppDelegate.swift */; };
+		740F2B752EDD9A3B00376232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B5B2EDD9A3B00376232 /* SceneDelegate.swift */; };
+		740F2B762EDD9A3B00376232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2B5C2EDD9A3B00376232 /* ViewController.swift */; };
+		740F2B772EDD9A3B00376232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740F2B532EDD9A3B00376232 /* Assets.xcassets */; };
+		740F2B782EDD9A3B00376232 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 740F2B552EDD9A3B00376232 /* GoogleService-Info.plist */; };
+		740F2B7A2EDD9A3B00376232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740F2B582EDD9A3B00376232 /* LaunchScreen.storyboard */; };
+		740F2B7B2EDD9A3B00376232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740F2B5A2EDD9A3B00376232 /* Main.storyboard */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E9D532804B3D0732860C545 /* Pods-CoinReactor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinReactor.release.xcconfig"; path = "Target Support Files/Pods-CoinReactor/Pods-CoinReactor.release.xcconfig"; sourceTree = "<group>"; };
+		740F2B312EDD9A3B00376232 /* CoinsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsEnum.swift; sourceTree = "<group>"; };
+		740F2B332EDD9A3B00376232 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		740F2B342EDD9A3B00376232 /* CounCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounCoinsView.swift; sourceTree = "<group>"; };
+		740F2B352EDD9A3B00376232 /* LevelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCell.swift; sourceTree = "<group>"; };
+		740F2B362EDD9A3B00376232 /* MainBlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBlueButtonView.swift; sourceTree = "<group>"; };
+		740F2B372EDD9A3B00376232 /* PowerUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerUpCell.swift; sourceTree = "<group>"; };
+		740F2B382EDD9A3B00376232 /* StoreCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCellView.swift; sourceTree = "<group>"; };
+		740F2B3A2EDD9A3B00376232 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		740F2B3B2EDD9A3B00376232 /* AchievementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewModel.swift; sourceTree = "<group>"; };
+		740F2B3D2EDD9A3B00376232 /* DailyRewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRewardsView.swift; sourceTree = "<group>"; };
+		740F2B3E2EDD9A3B00376232 /* DailyRewardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRewardsViewModel.swift; sourceTree = "<group>"; };
+		740F2B402EDD9A3B00376232 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		740F2B412EDD9A3B00376232 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		740F2B432EDD9A3B00376232 /* GameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
+		740F2B442EDD9A3B00376232 /* MinigameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinigameView.swift; sourceTree = "<group>"; };
+		740F2B452EDD9A3B00376232 /* MiniGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameViewModel.swift; sourceTree = "<group>"; };
+		740F2B472EDD9A3B00376232 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		740F2B492EDD9A3B00376232 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		740F2B4B2EDD9A3B00376232 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		740F2B4C2EDD9A3B00376232 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		740F2B4E2EDD9A3B00376232 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		740F2B502EDD9A3B00376232 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		740F2B522EDD9A3B00376232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		740F2B532EDD9A3B00376232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		740F2B542EDD9A3B00376232 /* CoinReactor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoinReactor.entitlements; sourceTree = "<group>"; };
+		740F2B552EDD9A3B00376232 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		740F2B562EDD9A3B00376232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		740F2B572EDD9A3B00376232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		740F2B592EDD9A3B00376232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		740F2B5B2EDD9A3B00376232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		740F2B5C2EDD9A3B00376232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		74F8FE322ECB084D006B1100 /* CoinReactor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinReactor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07F4763996C74E9D0D9729A /* Pods-CoinReactor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinReactor.debug.xcconfig"; path = "Target Support Files/Pods-CoinReactor/Pods-CoinReactor.debug.xcconfig"; sourceTree = "<group>"; };
 		E8CBE341D6E155CA4588FF60 /* Pods_CoinReactor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinReactor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		740F2AD72EDD95D200376232 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 74F8FE312ECB084D006B1100 /* CoinReactor */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		740F2ABE2EDD95D200376232 /* CoinReactor */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (740F2AD72EDD95D200376232 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = CoinReactor; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		74F8FE2F2ECB084D006B1100 /* Frameworks */ = {
@@ -46,10 +95,136 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		740F2B322EDD9A3B00376232 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				740F2B312EDD9A3B00376232 /* CoinsEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		740F2B392EDD9A3B00376232 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				740F2B332EDD9A3B00376232 /* CardView.swift */,
+				740F2B342EDD9A3B00376232 /* CounCoinsView.swift */,
+				740F2B352EDD9A3B00376232 /* LevelCell.swift */,
+				740F2B362EDD9A3B00376232 /* MainBlueButtonView.swift */,
+				740F2B372EDD9A3B00376232 /* PowerUpCell.swift */,
+				740F2B382EDD9A3B00376232 /* StoreCellView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		740F2B3C2EDD9A3B00376232 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				740F2B3A2EDD9A3B00376232 /* AchievementsView.swift */,
+				740F2B3B2EDD9A3B00376232 /* AchievementsViewModel.swift */,
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
+		740F2B3F2EDD9A3B00376232 /* DailyRewards */ = {
+			isa = PBXGroup;
+			children = (
+				740F2B3D2EDD9A3B00376232 /* DailyRewardsView.swift */,
+				740F2B3E2EDD9A3B00376232 /* DailyRewardsViewModel.swift */,
+			);
+			path = DailyRewards;
+			sourceTree = "<group>";
+		};
+		740F2B422EDD9A3B00376232 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				740F2B402EDD9A3B00376232 /* MainView.swift */,
+				740F2B412EDD9A3B00376232 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		740F2B462EDD9A3B00376232 /* MInigame */ = {
+			isa = PBXGroup;
+			children = (
+				740F2B432EDD9A3B00376232 /* GameBoardView.swift */,
+				740F2B442EDD9A3B00376232 /* MinigameView.swift */,
+				740F2B452EDD9A3B00376232 /* MiniGameViewModel.swift */,
+			);
+			path = MInigame;
+			sourceTree = "<group>";
+		};
+		740F2B482EDD9A3B00376232 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				740F2B472EDD9A3B00376232 /* OnBoardingView.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		740F2B4A2EDD9A3B00376232 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				740F2B492EDD9A3B00376232 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		740F2B4D2EDD9A3B00376232 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				740F2B4B2EDD9A3B00376232 /* StatisticsView.swift */,
+				740F2B4C2EDD9A3B00376232 /* StatisticsViewModel.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		740F2B4F2EDD9A3B00376232 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				740F2B4E2EDD9A3B00376232 /* StoreView.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		740F2B512EDD9A3B00376232 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				740F2B3C2EDD9A3B00376232 /* Achievements */,
+				740F2B3F2EDD9A3B00376232 /* DailyRewards */,
+				740F2B422EDD9A3B00376232 /* Main */,
+				740F2B462EDD9A3B00376232 /* MInigame */,
+				740F2B482EDD9A3B00376232 /* OnBoarding */,
+				740F2B4A2EDD9A3B00376232 /* Settings */,
+				740F2B4D2EDD9A3B00376232 /* Statistics */,
+				740F2B4F2EDD9A3B00376232 /* Store */,
+				740F2B502EDD9A3B00376232 /* ContentView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		740F2B5D2EDD9A3B00376232 /* CoinReactor */ = {
+			isa = PBXGroup;
+			children = (
+				740F2B322EDD9A3B00376232 /* Enums */,
+				740F2B392EDD9A3B00376232 /* Helpers */,
+				740F2B512EDD9A3B00376232 /* Screens */,
+				740F2B522EDD9A3B00376232 /* AppDelegate.swift */,
+				740F2B532EDD9A3B00376232 /* Assets.xcassets */,
+				740F2B542EDD9A3B00376232 /* CoinReactor.entitlements */,
+				740F2B552EDD9A3B00376232 /* GoogleService-Info.plist */,
+				740F2B562EDD9A3B00376232 /* Info.plist */,
+				740F2B582EDD9A3B00376232 /* LaunchScreen.storyboard */,
+				740F2B5A2EDD9A3B00376232 /* Main.storyboard */,
+				740F2B5B2EDD9A3B00376232 /* SceneDelegate.swift */,
+				740F2B5C2EDD9A3B00376232 /* ViewController.swift */,
+			);
+			path = CoinReactor;
+			sourceTree = "<group>";
+		};
 		74F8FE292ECB084D006B1100 = {
 			isa = PBXGroup;
 			children = (
-				740F2ABE2EDD95D200376232 /* CoinReactor */,
+				740F2B5D2EDD9A3B00376232 /* CoinReactor */,
 				74F8FE332ECB084D006B1100 /* Products */,
 				91595304A47F6C66258A2A02 /* Pods */,
 				2BB8731D10EB9B92437C0D8F /* Frameworks */,
@@ -88,9 +263,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				740F2ABE2EDD95D200376232 /* CoinReactor */,
 			);
 			name = CoinReactor;
 			productName = CoinReactor;
@@ -137,6 +309,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				740F2B772EDD9A3B00376232 /* Assets.xcassets in Resources */,
+				740F2B782EDD9A3B00376232 /* GoogleService-Info.plist in Resources */,
+				740F2B7A2EDD9A3B00376232 /* LaunchScreen.storyboard in Resources */,
+				740F2B7B2EDD9A3B00376232 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,10 +348,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				740F2B5E2EDD9A3B00376232 /* CoinsEnum.swift in Sources */,
+				740F2B5F2EDD9A3B00376232 /* CardView.swift in Sources */,
+				740F2B602EDD9A3B00376232 /* CounCoinsView.swift in Sources */,
+				740F2B612EDD9A3B00376232 /* LevelCell.swift in Sources */,
+				740F2B622EDD9A3B00376232 /* MainBlueButtonView.swift in Sources */,
+				740F2B632EDD9A3B00376232 /* PowerUpCell.swift in Sources */,
+				740F2B642EDD9A3B00376232 /* StoreCellView.swift in Sources */,
+				740F2B652EDD9A3B00376232 /* AchievementsView.swift in Sources */,
+				740F2B662EDD9A3B00376232 /* AchievementsViewModel.swift in Sources */,
+				740F2B672EDD9A3B00376232 /* DailyRewardsView.swift in Sources */,
+				740F2B682EDD9A3B00376232 /* DailyRewardsViewModel.swift in Sources */,
+				740F2B692EDD9A3B00376232 /* MainView.swift in Sources */,
+				740F2B6A2EDD9A3B00376232 /* MainViewModel.swift in Sources */,
+				740F2B6B2EDD9A3B00376232 /* GameBoardView.swift in Sources */,
+				740F2B6C2EDD9A3B00376232 /* MinigameView.swift in Sources */,
+				740F2B6D2EDD9A3B00376232 /* MiniGameViewModel.swift in Sources */,
+				740F2B6E2EDD9A3B00376232 /* OnBoardingView.swift in Sources */,
+				740F2B6F2EDD9A3B00376232 /* SettingsView.swift in Sources */,
+				740F2B702EDD9A3B00376232 /* StatisticsView.swift in Sources */,
+				740F2B712EDD9A3B00376232 /* StatisticsViewModel.swift in Sources */,
+				740F2B722EDD9A3B00376232 /* StoreView.swift in Sources */,
+				740F2B732EDD9A3B00376232 /* ContentView.swift in Sources */,
+				740F2B742EDD9A3B00376232 /* AppDelegate.swift in Sources */,
+				740F2B752EDD9A3B00376232 /* SceneDelegate.swift in Sources */,
+				740F2B762EDD9A3B00376232 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		740F2B582EDD9A3B00376232 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				740F2B572EDD9A3B00376232 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		740F2B5A2EDD9A3B00376232 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				740F2B592EDD9A3B00376232 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		74F8FE462ECB084E006B1100 /* Debug */ = {
